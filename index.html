@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     if(!document.title){ document.title = "MD Elektro Steuerungstechnik (Entwurf)"; }
   }
   setz();
-  try { new MutationObserver(setz).observe(document.head, {childList:true}); } catch(e){}
+  setInterval(setz, 1000);
   document.addEventListener("DOMContentLoaded", setz);
   window.addEventListener("load", setz);
 })();
